@@ -83,3 +83,87 @@ section{
 	background-color: #FFF;
 	transition: all ease-in-out .5s;
 }
+
+.overlayContent span{
+	display: block;
+	margin: 20px auto;
+	width: 3em;
+	height: 2px;
+	background:#3B5998;
+	transform: scale(1);
+	transition: .5s;
+}
+.overlayContent h3{
+	font-weight: 400;
+	margin-bottom: 20px;
+	transition: .5s;
+}
+.overlayContent p{
+	font-size: 95%;
+	line-height: 1.3em;
+	transform: scale(1);
+	transition: .5s;
+}
+.overlayHref{
+	position: absolute;
+	top:50%;
+	left: 33%;
+	margin:auto;
+	text-transform: uppercase;
+	font-size: 80%;
+	font-weight: bold;
+	background:#3B5998;
+	padding: 10px 15px;
+	transform:scale(0);
+	opacity: 0;
+	transition: .5s;
+	-webkit-box-shadow: 0px 11px 6px -13px rgba(0,0,0,0.73);
+	-moz-box-shadow: 0px 11px 6px -13px rgba(0,0,0,0.73);
+	box-shadow: 0px 11px 6px -13px rgba(0,0,0,0.73);
+}
+.overlayHref a{
+	color:#FFF;
+	text-decoration: none;
+
+}
+.imgBox:hover .overlayContent span{
+	opacity: 0;
+	transform: scale(0);
+}
+.imgBox:hover .overlayContent h3{
+	transform: translateY(-35px);
+	transition: .5s;
+}
+.imgBox:hover .overlayContent p{
+	opacity: 0;
+	transition: .5s;
+}
+.imgBox:hover .overlayContent{
+	height: 20%;
+	transition: .5s;
+}
+.imgBox:hover img{
+	transform: scale(2);
+	transition: .5s;
+}
+.imgBox:hover .overlayHref{
+	opacity: 1;
+	transform: scale(1);
+	transition: .5s;
+}
+@media only screen and (max-width: 750px){
+	.col-3{
+		display: inline-block;
+		margin: 0 1%;
+		height: auto;
+		width: 100%;
+	}
+	.imgBox{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+	.imgBox img{
+		width: 100%;
+	}
+}
