@@ -151,19 +151,76 @@ section{
 	transform: scale(1);
 	transition: .5s;
 }
+.overlayHref:hover{
+	background-color: #012346;
+}
 @media only screen and (max-width: 750px){
+	.container{
+		position: absolute;
+		width: 95%;
+		left: 2.5%;
+	}
 	.col-3{
-		display: inline-block;
-		margin: 0 1%;
+		float: left;
+		margin:0 0 40px 0;
 		height: auto;
 		width: 100%;
 	}
 	.imgBox{
+		float: left;
 		width: 100%;
 		height: auto;
-		overflow: hidden;
 	}
 	.imgBox img{
+		float: left;
 		width: 100%;
+		height: auto;
+		transform: translateX(0) scale(1);
+		transition: .5s;
 	}
+	.overlayContent{
+		position: absolute;
+		top:0;
+		width: 100%;
+		height: auto;
+		padding: 20px;
+		text-align: left;
+	}
+	.overlayContent span{
+		top: 50%;
+		position: absolute;
+		display: block;
+		margin: 0 0 20px 0;
+		width: 40%;
+		height: 2px;
+		background:#3B5998;
+		transform: scale(1);
+		transition: .5s;
+	}
+	.overlayContent h3{
+		font-weight: 600;
+	}
+	.overlayHref{
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 0;
+		right: 0;
+		width: 150px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.imgBox:hover .overlayContent{
+		height: 15%;
+	}
+	.imgBox:hover .overlayContent h3{
+		transform: translateY(0);
+	}
+	.imgBox:hover .overlayContent span{
+		margin: 25px 0 0 0;
+		padding: 0;
+		opacity: 0;
+		transform: translateX(0) scale(2);
+	}
+
 }
