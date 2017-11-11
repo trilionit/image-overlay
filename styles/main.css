@@ -1,0 +1,85 @@
+html{
+	height: 100%;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 87.5%; /* Base font size: 14px */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    background: #F3F3F3;
+    color: #666;
+    line-height: 1.5em;
+}
+section{
+	width: 100%;
+}
+.slider-component{
+	width: 100%;
+	height: 350px;
+	background-color: #ccc;
+}
+.container{
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	width:80%;
+	margin: 0 auto;
+}
+
+.col-3{
+	display: inline-block;
+	margin: 0 1%;
+	height: 300px;
+	width: 28%;
+}
+.col-3:last-child{
+	margin-right: 0;
+}
+.imgBox{
+	position: relative;
+	width: 100%;
+	height: 450px;
+	background:#FFF;
+	background-size: cover;
+	overflow: hidden;
+}
+.imgBox img{
+	height: 100%;
+	transform: translateX(-50%) scale(1);
+	transition: .5s;
+}
+.overlayBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:transparent;
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+}
+.overlayBox:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transform: translateY(100%) scale(1) skew(45deg);
+	transition: .5s;
+}
+.overlayContent{
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 45%;
+	padding: 20px;
+	text-align: center;
+	background-color: #FFF;
+	transition: all ease-in-out .5s;
+}
